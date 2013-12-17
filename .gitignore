@@ -1,2 +1,10 @@
 
 *.pbxuser
+
+*.o
+
+Solar
+
+*.xccheckout
+
+*.xcuserstate

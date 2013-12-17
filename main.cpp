@@ -136,7 +136,6 @@ void RenderScene(void) {
 	//position the light after we draw the sun!
 	GLfloat lightPos[] = {0.0f, 0.0f, 0.0f, 1.0f};
 	GLfloat amb_dif[] = {1.0f, 1.0f, 1.0, 1.0f};
-	//GLfloat diffuse[] = {1.0f, 1.0f, 1.0f, 1.0f};
 	glLightfv(GL_LIGHT0, GL_POSITION, lightPos);
 	glLightfv(GL_LIGHT0, GL_AMBIENT_AND_DIFFUSE, amb_dif);
 	glEnable(GL_LIGHT0);
@@ -281,7 +280,7 @@ void SpecialKeys(int key, int mouseX, int mouseY) {
         default:
             break;
     }
-    std::cerr << "\nSpecialKeys\n";
+    std::cerr << "\nSpecialKeys: " << key << "\n";
 
 }
 
