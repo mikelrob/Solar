@@ -9,11 +9,13 @@
 #include <vector>
 #include <string>
 #include <stdlib.h>
+#include <filesystem>
 
 using std::string;
 using std::ifstream;
 using std::istringstream;
 using std::vector;
+namespace fs = std::filesystem;
 
 vector<Planet *> solarSystem;
 float xRot = 50.0f;
@@ -23,7 +25,10 @@ float zPos = -2000.0f;
 
 void setupScene(void) {
     // for reading in CSV from file
-	ifstream inFile ("/Users/mikelrob/Documents/Xcode/Solar/PlanetInfo.dat", ifstream::in);
+    fs::path pwd = fs::current_path();
+    string dataFilePath = pwd.string() + "/PlanetInfo.dat";
+    std::cout << dataFilePath;
+    ifstream inFile (dataFilePath, ifstream::in);
     string line;
     int linenum = 0;
     while (inFile.good())
