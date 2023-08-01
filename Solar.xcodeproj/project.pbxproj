@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E51EEE72A791FD70005403A /* PlanetInfo.dat in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E68060812A9816900FDF3D4 /* PlanetInfo.dat */; };
 		3E624651162F365700C62270 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E62464F162F365700C62270 /* GLUT.framework */; };
 		3E624652162F365700C62270 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E624650162F365700C62270 /* OpenGL.framework */; };
 		3E6F02D312A3F11A002D4706 /* Planet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E6F02D212A3F11A002D4706 /* Planet.cpp */; };
@@ -18,13 +19,14 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		8DD76F690486A84900D96B5E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				3E51EEE72A791FD70005403A /* PlanetInfo.dat in CopyFiles */,
 				8DD76F6A0486A84900D96B5E /* Solar.1 in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -174,6 +176,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_NAME = Solar;
 				SDKROOT = macosx;
 			};
@@ -186,6 +189,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_NAME = Solar;
 				SDKROOT = macosx;
 			};
@@ -195,7 +199,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -208,7 +213,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				SDKROOT = macosx;
